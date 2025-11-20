@@ -27,11 +27,11 @@ public class AppTest {
     Cliente c3 = new Cliente(83, new double[]{12.0});
 
     return Stream.of(
-        Arguments.of(
+        Arguments.of(  //Para la primera iteracion
             new ArrayList<>(Arrays.asList(c1, c2)),   // clientes iniciales
             new ArrayList<>(Arrays.asList(c3))        // clientes para SetCliente
         ),
-        Arguments.of(
+        Arguments.of(  //Para la segunda iteracion
             new ArrayList<>(),                        // lista inicial vacía
             new ArrayList<>(Arrays.asList(c1))        // uno solo en set
         )
@@ -49,5 +49,7 @@ public class AppTest {
         claro.SetCliente(clientset);
         assertEquals(clientset, claro.GetCliente());
     }
+
+
 
 }
